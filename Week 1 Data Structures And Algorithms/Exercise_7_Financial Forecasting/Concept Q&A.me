@@ -1,0 +1,25 @@
+#Exercise 7: Financial Forecasting
+Step 1: Understanding Recursive Algorithms
+i) Explain the concept of recursion and how it can simplify certain problems.
+Recursion is a programming technique where a method calls itself to solve smaller instances of a problem, typically until it reaches a base case.
+Uses of Recursion:
+•	Simplifies problems that can be broken into smaller subproblems
+•	Common in calculations like factorials, Fibonacci, and here: compound forecasting
+Step 2: Setup - Future Value Formula
+We use the compound growth formula:
+                            FV=PV×(1+r)^n
+Where:
+•	FV = Future Value
+•	PV = Present Value
+•	r = growth rate per period (as decimal)
+•	n = number of periods (e.g., years)
+
+Step 4: Analysis
+Time Complexity:
+•	Recursive calls: one per year → O(n) time complexity, where n is the number of years.
+•	Space complexity: also O(n) due to the recursive call stack.
+Optimization Tips:
+1.	Avoid Recalculating:
+o	If intermediate results are reused, store them using memoization.
+2.	Use Iteration:
+o	Convert recursion to a loop for better performance and avoid stack overflow.
