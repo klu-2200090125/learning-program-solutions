@@ -1,0 +1,55 @@
+#Algorithms_Data Structures:
+Exercise 2: E-commerce Platform Search Function
+Step 1: Understand Asymptotic Notation
+i) Explain Big O notation and how it helps in analyzing algorithms
+Big O notation is used to describe the time complexity (or space complexity) of an algorithm in terms of input size n. It tells you how the performance scales as the data grows.
+Uses:
+•	Helps evaluate efficiency of algorithms
+•	Allows for comparing different algorithms
+•	Predicts performance at scale (e.g., 1,000 vs 1,000,000 products)
+ii) Describe the best, average, and worst-case scenarios for search operations.
+Algorithm	Best Case	Average Case	Worst Case
+Linear Search	O(1)	O(n)	O(n)
+Binary Search	O(1)	O(log n)	O(log n)
+Binary search is always faster for large sorted datasets.
+
+Step 4: Analysis & Conclusion
+i) Compare the time complexity of linear and binary search algorithms.
+Time Complexity Comparison
+Algorithm	Time Complexity	Requires Sorting?	Suitable for
+Linear Search	O(n)	 No	Small datasets, unsorted
+Binary Search	O(log n)	 Yes	Large datasets, sorted
+ii) Discuss which algorithm is more suitable for your platform and why.
+ Binary Search is better for performance, especially on large sorted data.
+ Linear Search works when:
+•	Dataset is small
+•	Dataset is not sorted
+•	Simplicity is prioritized
+
+
+#Exercise 7: Financial Forecasting
+Step 1: Understanding Recursive Algorithms
+i) Explain the concept of recursion and how it can simplify certain problems.
+Recursion is a programming technique where a method calls itself to solve smaller instances of a problem, typically until it reaches a base case.
+Uses of Recursion:
+•	Simplifies problems that can be broken into smaller subproblems
+•	Common in calculations like factorials, Fibonacci, and here: compound forecasting
+Step 2: Setup - Future Value Formula
+We use the compound growth formula:
+                            FV=PV×(1+r)^n
+Where:
+•	FV = Future Value
+•	PV = Present Value
+•	r = growth rate per period (as decimal)
+•	n = number of periods (e.g., years)
+
+Step 4: Analysis
+Time Complexity:
+•	Recursive calls: one per year → O(n) time complexity, where n is the number of years.
+•	Space complexity: also O(n) due to the recursive call stack.
+Optimization Tips:
+1.	Avoid Recalculating:
+o	If intermediate results are reused, store them using memoization.
+2.	Use Iteration:
+o	Convert recursion to a loop for better performance and avoid stack overflow.
+
